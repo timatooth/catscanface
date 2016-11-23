@@ -45,5 +45,14 @@ pip dependencies for AWS & Datadog
 
 ```pip install boto3 dogstatsd```
 
-## AWS Lambda Function for Haar Cascade facial recognition:
-TODO
+## AWS Lambda Function for Cat Haar-Cascade facial detection:
+
+#### CloudFormation Stack
+
+    aws cloudformation create-stack --stack-name catscanface --template-body file://cloudformation.yaml --capabilities CAPABILITY_IAM --parameters ParameterKey=S3BucketName,ParameterValue=timatooth
+
+#### Lambda Deployment
+
+This will download [OpenCV compiled on Amazon Linux](https://github.com/aeddi/aws-lambda-python-opencv) and update the AWS Lambda function code.
+
+    ./deploy-lambda.sh

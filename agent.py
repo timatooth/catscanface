@@ -3,7 +3,7 @@
 # usage of Sense Hat and statsd optional
 import logging
 logging.basicConfig(format='%(asctime)s %(name)s %(levelname)s %(message)s', level=logging.INFO)
-log = logging.getLogger('catface')
+log = logging.getLogger('catscanface-agent')
 import datetime
 import argparse
 import time
@@ -134,7 +134,7 @@ if __name__ == '__main__':
     parser.add_argument('--image-path', help='Where to save images locally eg /tmp', default=os.environ.get('image_path', '/tmp'))
     parser.add_argument('--enable-s3', help='Enable saving frames to AWS S3', action='store_true', default=os.environ.get('enable_s3', '1'))
     parser.add_argument('--s3-bucket', help='AWS S3 bucket to save frames', default=os.environ.get('s3_bucket', 'timatooth'))
-    parser.add_argument('--s3-prefix', help='AWS S3 bucket prefix path e.g cats/', default=os.environ.get('s3_prefix', 'catmotion/'))
+    parser.add_argument('--s3-prefix', help='AWS S3 bucket prefix path e.g cats/', default=os.environ.get('s3_prefix', 'catscanface/motion/'))
 
     args = parser.parse_args()
     log.debug(args)
