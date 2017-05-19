@@ -1,10 +1,15 @@
 # catscanface 😺
 > Detect motion and cat faces with Raspberry Pi, OpenCV & AWS Lambda
 
+![Thug cat detected with OpenCV](https://i.imgur.com/RDmYoce.png)
+
 Contains Raspberry Pi agent for uploading motion detected frames to S3 which triggers a Python lambda function
 for doing further cat Haar Cascade facial processing.
 
 Makes optional use of Datadog for statsd metrics & Raspberry Pi Sense Hat.
+
+#### Blog post
+http://timatooth.com/development/2017/01/01/raspberry-pi-motion-detection-aws-lambda-opencv.html
 
 ## Raspberry Pi Agent usage
 Configuration can be set on the command line or via environment variables. Usage of S3 requires AWS client ID & secrets
